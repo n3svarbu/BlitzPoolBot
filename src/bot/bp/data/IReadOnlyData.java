@@ -9,4 +9,6 @@ public interface IReadOnlyData extends Observable
 {
 	public List<String> getWindowsNames();
 	public IBall getBall(int number);
+	public int getTurn();
+	public int getPower();
 }

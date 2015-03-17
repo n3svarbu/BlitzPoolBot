@@ -38,11 +38,16 @@ public class ProcessFinder
 		return windowNames;
 	}
 	
-	public static int getProcessId(String windowName)
+	public static HWND getProcess(String windowName)
     {  
-        IntByReference pid = new IntByReference();
         HWND window = user32.FindWindow(null, windowName);
         System.out.println(window);
+        return window;  
+    }
+	
+	public static int getProcessId(HWND window)
+    {  
+        IntByReference pid = new IntByReference();
         user32.GetWindowThreadProcessId(window, pid);  
         return pid.getValue();  
     }

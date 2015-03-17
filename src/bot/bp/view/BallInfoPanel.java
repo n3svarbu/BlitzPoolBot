@@ -9,8 +9,6 @@ import java.awt.RenderingHints;
 
 import javax.swing.JPanel;
 
-import com.sun.xml.internal.bind.util.Which;
-
 import bot.bp.ball.BallType;
 import bot.bp.ball.IBall;
 import bot.bp.data.IReadOnlyData;

@@ -1,7 +1,20 @@
 package bot.bp.data;
 
+import bot.bp.memory.Address;
+
 public class Addresses
 {
+	public static final Address TURN = new Address(0x007BC9F0, new int[]{ 0x524 });
+	public static final Address POWER = new Address(0x007BC9F0, new int[]{ 0x388, 0x1B0 });
+	public static final Address CLICK = new Address(0x007BC9F0, new int[]{ 0x4AC });
+	public static final Address ISTABLEOPEN = new Address(0x007BC9F0, new int[]{ 0x1E2 });
+	public static final Address ISTABLEFOCUSED = new Address(0x007BC9F0, new int[]{ 0x4B3 });
+	public static final Address ISBALLSTANDING = new Address(0x007BC9F0, new int[]{ 0x4AE });
+	public static final Address ISTABLEREADY = new Address(0x007BC9F0, new int[]{ 0x4B7 });
+	
+	public static final Address POINT_X = new Address(0x007BB030);
+	public static final Address POINT_Y = new Address(0x007BB030);
+	
 	public static final int[] list =
 	{
 		// mouse					0

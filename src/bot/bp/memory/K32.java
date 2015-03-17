@@ -28,5 +28,17 @@ public interface K32 extends Kernel32
     //          __in   SIZE_T nSize,  
     //          __out  SIZE_T *lpNumberOfBytesRead  
     //        );  
-    boolean ReadProcessMemory(Pointer hProcess, int inBaseAddress, Pointer outputBuffer, int nSize, IntByReference outNumberOfBytesRead);  
+    boolean ReadProcessMemory(Pointer hProcess, int inBaseAddress, Pointer outputBuffer, int nSize, IntByReference outNumberOfBytesRead);
+    
+    //BOOL WINAPI VirtualLock(
+    //		  _In_  LPVOID lpAddress,
+    // 		  _In_  SIZE_T dwSize
+    // 		);
+    boolean VirtualLock(int address, int size);
+    
+    //BOOL WINAPI VirtualUnlock(
+    //		  _In_  LPVOID lpAddress,
+    // 		  _In_  SIZE_T dwSize
+    // 		);
+    boolean VirtualUnlock(int address, int size);
 }  

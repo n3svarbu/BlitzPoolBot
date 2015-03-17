@@ -12,9 +12,14 @@ public class Data implements IData
 	private List<String> windowsNames;
 	private List<IBall> balls;
 	
+	private int turn;
+	private int power;
+	
 	public Data()
 	{
 		balls = new ArrayList<IBall>();
+		turn = 0;
+		power = 0;
 	}
 	
 	public void setWindowsEnumList(List<String> list)
@@ -84,5 +89,25 @@ public class Data implements IData
 		IBall ball = getTrueBall(number);
 		if (ball != null)
 			ball.setPos(x, y);
+	}
+	
+	public void setPower(int power)
+	{
+		this.power = power;
+	}
+	
+	public int getPower()
+	{
+		return power;
+	}
+	
+	public void setTurn(int turn)
+	{
+		this.turn = turn;
+	}
+	
+	public int getTurn()
+	{
+		return turn;
 	}
 }
